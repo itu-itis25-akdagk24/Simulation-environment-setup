@@ -25,7 +25,7 @@ def ardupilot_vehicle(drone_number):
 
 def drone_control():
         subprocess.Popen(['gnome-terminal', '--', 'bash', '-c',
-                          'python drone_control.py; exec bash'])
+                          'python exp_drone_control.py; exec bash'])
         print(f"Drone control.")  
 
 
