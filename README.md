@@ -95,7 +95,7 @@ Make sure all the files are available:
 cd Simulation-environment-setup/
 ls
 """ you should see something like that:
-exp_drone_control.py       iris_runway_multidrone.sdf   iris_with_gimbal_2
+exp_drone_control.py       iris_runway_tripledrone.sdf   iris_with_gimbal_2
 initialize.py              iris_runway_singledrone.sdf  iris_with_gimbal_3
 iris_runway_dualdrone.sdf  iris_with_gimbal_1           README.md
 """
@@ -120,7 +120,7 @@ At the end, please make sure that:
 The following files are in ~/gz_ws/src/ardupilot_gazebo/worlds
 ```bash
 iris_runway_dualdrone.sdf    
-iris_runway_multidrone.sdf   
+iris_runway_tripledrone.sdf   
 iris_runway_singledrone.sdf  
 ```
 And the following folders are in ~/gz_ws/src/ardupilot_gazebo/models
