@@ -23,9 +23,9 @@ def ardupilot_vehicle(drone_number):
         print(f"Drone {i} launched")
         time.sleep(2)
 
-def drone_control():
+def drone_control(drone_number):
         subprocess.Popen(['gnome-terminal', '--', 'bash', '-c',
-                          'python exp_drone_control.py; exec bash'])
+                          f'python exp_drone_control.py {drone_number}; exec bash'])
         print(f"Drone control.")  
 
 
