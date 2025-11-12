@@ -1,20 +1,16 @@
 # Gazebo an Ardupilotplugin Setup
 Gazebo and ArduPilot setup, including some model and world configurations.
 
-Ubuntu 22.04
-
-Gazebo Sim Harmonic, version 8.10.0
-
+Ubuntu 22.04\
+Gazebo Sim Harmonic, version 8.10.0\
 ArduPilot-4.6.0
 
 NOTE: The ArduPilot plugin does not depend on ROS. Therefore, in this setup, we will skip ROS installation for now. In the future, it may be necessary.
 
 All the documents using this setup are listed below:
 
-https://gazebosim.org/docs/harmonic/install_ubuntu/ gazebo harmonic installation
-
-https://ardupilot.org/dev/docs/sitl-with-gazebo.html ardupilot+gazebo plugin
-
+https://gazebosim.org/docs/harmonic/install_ubuntu/ gazebo harmonic installation\
+https://ardupilot.org/dev/docs/sitl-with-gazebo.html ardupilot+gazebo plugin\
 https://discuss.ardupilot.org/uploads/default/original/2X/d/d7083377f747deab79798e7a9cef58d433ff5f66.pdf multiple drones
 
 ## Gazebo Harmonic Installation
@@ -87,12 +83,14 @@ takeoff 10
 If, at the end of the SITL terminal, you can see “heartbeat received” and do not see any “JSON message not received” errors, you can use the ArduPilot plugin and Gazebo properly. After this step, we can edit our worlds and models and start using them.
 
 ## Multiple Drone Simülation Environment
-Firsty, please clone this github repo on your computer.(if you have an issue about cloning, just download as a zip.No problem)
+First, please clone this GitHub repository to your computer.\
+(If you have any issues cloning, just download it as a ZIP file — no problem.)
 ```bash
 https://github.com/itu-itis25-akdagk24/Simulation-environment-setup.git
-#password: if you dont have any of them please take a personal acces token from githup.
+# If you're asked for a password and don’t have one, please generate a personal access token from GitHub.
 ```
-please be unsure that all the files are with you.
+Make sure all the files are available:
+
 ```bash
 cd Simulation-environment-setup/
 ls
@@ -102,25 +100,52 @@ initialize.py              iris_runway_singledrone.sdf  iris_with_gimbal_3
 iris_runway_dualdrone.sdf  iris_with_gimbal_1           README.md
 """
 ```
-Now, you have to move this worlds files and model files to the relevant place in gz_ws which we have already work on it. You can use it manually, world files have to go to ~/gz_ws/src/ardupilot_gazebo/worlds and model folders have to go to
-~/gz_ws/src/ardupilot_gazebo/models. If you want you can use following commands also:
+Now, you need to move the world and model files to the appropriate locations inside your gz_ws workspace that we’ve already worked on.\
+You can do this manually, or use the following command.~/gz_ws/src/ardupilot_gazebo/models. If you want you can use following commands also:
+
+World files must be placed in:\
+~/gz_ws/src/ardupilot_gazebo/worlds
+
+Model folders must be placed in:\
+~/gz_ws/src/ardupilot_gazebo/models
+
+If you prefer using the terminal, you can use:
 
 ```bash
-mv [source_directory_path] [source_directory_path]
+mv [source_directory_path] [target_directory_path]
 
 ```
-At the end be ensure the:
-following fields should in the ~/gz_ws/src/ardupilot_gazebo/worlds
+At the end, please make sure that:
+
+The following files are in ~/gz_ws/src/ardupilot_gazebo/worlds
+```bash
 iris_runway_dualdrone.sdf    
 iris_runway_multidrone.sdf   
 iris_runway_singledrone.sdf  
-
-following fields should in the ~/gz_ws/src/ardupilot_gazebo/models
+```
+And the following folders are in ~/gz_ws/src/ardupilot_gazebo/models
+```bash
 iris_with_gimbal_1
 iris_with_gimbal_2
 iris_with_gimbal_3
+```
+These steps are very important — please don’t skip them.
 
-These are very important please do not forget.
+After completing the world and model file setup, you can start your simulation environment.\
+(Note: This simulation currently supports a maximum of 3 drones.)
+```bash
+cd Simulation-environment-setup
+python initialize.py <drone_number>
+```
+After running this command, you should see:
+
+The Gazebo GUI with multiple drones\
+One ArduPilot SITL terminal, one MAVProxy console, and one MAVProxy map for each drone\
+An example drone control UI for testing your connections with some basic features (like arm, takeoff, swarm move)
+
+If you complete this setup and can control your drones in Gazebo, you are ready to make the drones dance.
+
+
 
 
 
