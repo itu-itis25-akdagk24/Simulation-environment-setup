@@ -185,7 +185,7 @@ An example drone control terminal UI for testing your connections with some basi
 
 If you complete this setup and can control your drones in Gazebo, you are ready to make the drones dance.
 
-Some common issues and their solutions:
+## Some common issues and their solutions:
 
 Python:commond not found.
 ```bash
