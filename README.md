@@ -100,6 +100,8 @@ These commands install MAVProxy and all required Python dependencies.
 sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml python3-pygame
 python3 -m pip install PyYAML mavproxy --user
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+source ~/.bashrc
+
 ```
 
 ### Using Gazebo with ArduPilot¶
@@ -196,12 +198,12 @@ sim_vehicle.py command not found.
 ```bash
 export PATH=$PATH:$HOME/ardupilot/Tools/autotest
 ```
-If you have still issue please, ensure that you have complete SITL steps correctly. /
+If you have still issue please, ensure that you have complete SITL steps correctly./
 
-Please consider the error information. For example, if it says something like:
-xxxx module not found
-then try:
-sudo apt install xxxx
+Please consider the error information. For example, if it says something like:/
+xxxx module not found/
+then try:/
+sudo apt install xxxx/
 Just install it.
 
 
