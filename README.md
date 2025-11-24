@@ -162,9 +162,12 @@ Model folders must be placed in:\
 
 If you prefer using the terminal, you can use:
 
-```bash
-mv [source_directory_path] [target_directory_path]
+```bash 
+cd ~/Simulation-environment-setup
 
+mv iris_runway_singledrone.sdf iris_runway_dualdrone.sdf iris_runway_tripledrone.sdf ~/gz_ws/src/ardupilot_gazebo/worlds
+
+mv iris_with_gimbal_1 iris_with_gimbal_2 iris_with_gimbal_3 ~/gz_ws/src/ardupilot_gazebo/models
 ```
 At the end, please make sure that:
 
