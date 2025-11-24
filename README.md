@@ -136,6 +136,7 @@ If, at the end of the SITL terminal, you can see “heartbeat received” and do
 First, please clone this GitHub repository to your computer.\
 (If you have any issues cloning, just download it as a ZIP file — no problem.)
 ```bash
+cd
 git clone https://github.com/itu-itis25-akdagk24/Simulation-environment-setup.git
 # If you're asked for a password and don’t have one, please generate a personal access token from GitHub.
 ```
