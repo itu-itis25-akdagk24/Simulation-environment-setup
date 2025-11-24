@@ -6,13 +6,20 @@ Gazebo Sim Harmonic, version 8.10.0\
 ArduPilot-4.6.0
 
 NOTE: The ArduPilot plugin does not depend on ROS. Therefore, in this setup, we will skip ROS installation for now. In the future, it may be necessary.\
-NOTE: At the end of this documentation, there is a Common Issues section. If you have any problems, please check that section first.
+NOTE: At the end of this documentation, there is a Common Issues section. If you have any problems, please check that section first.\
+NOTE: If you do not install "git" before, please ensure that you install it.
+```bash
+sudo apt-get update
+sudo apt install git
+```
+
 
 All the documents using this setup are listed below:
 
 https://gazebosim.org/docs/harmonic/install_ubuntu/ gazebo harmonic installation\
 https://ardupilot.org/dev/docs/sitl-with-gazebo.html ardupilot+gazebo plugin\
 https://discuss.ardupilot.org/uploads/default/original/2X/d/d7083377f747deab79798e7a9cef58d433ff5f66.pdf multiple drones
+https://ardupilot.org/dev/docs/building-setup-linux.html ardupilot installation
 
 ## Gazebo Harmonic Installation
 First install some necessary tools:
@@ -41,7 +48,7 @@ Tools/environment_install/install-prereqs-ubuntu.sh -y
 ```
 Build SITL
 ```bash
-cd ArduCopter
+cd ardupilot
 ./waf configure --board sitl
 ./waf copter
 ```
